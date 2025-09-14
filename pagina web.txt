@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Movimiento juvenil que rescata las huellas de mujeres que cambiaron la historia del Perú." />
+  <meta name="keywords" content="mujeres peruanas, historia, liderazgo, juventud, educación, Perú" />
+  <meta name="author" content="Buscadores de Huellas Eternas" />
+  <title>Buscadores de Huellas Eternas</title>
+  <style>
+    /* Reset y base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: #2e004f;
+      color: #e0d7f5;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    a {
+      color: #b388ff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #d1c4e9;
+    }
+    header, nav, main, footer {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    nav {
+      background: #3a0070;
+      padding: 1rem 0;
+      border-radius: 8px;
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    nav a {
+      color: #d1c4e9;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    h1, h2, h3 {
+      font-weight: 700;
+      text-shadow: 0 0 8px #b388ff;
+    }
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #b388ff;
+      padding-bottom: 0.3rem;
+      max-width: max-content;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: #d1c4e9;
+    }
+    button, .btn {
+      background: #7e57c2;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 30px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 0 15px #b388ff;
+      transition: background 0.3s ease;
+      margin: 0.5rem 0;
+      display: inline-block;
+      text-align: center;
+    }
+    button:hover, .btn:hover {
+      background: #9c6eff;
+      box-shadow: 0 0 25px #d1c4e9;
+    }
+    .btn-whatsapp {
+      background: #25d366;
+      box-shadow: 0 0 15px #25d366;
+    }
+    .btn-whatsapp:hover {
+      background: #1ebe57;
+      box-shadow: 0 0 25px #1ebe57;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #b388ff;
+    }
+    section {
+      margin: 3rem 0;
+    }
+    .flex {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .card {
+      background: #3a0070;
+      border-radius: 15px;
+      padding: 1.5rem;
+      width: 300px;
+      box-shadow: 0 0 20px #7e57c2;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 30px #9c6eff;
+    }
+    .icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #b388ff;
+      text-align: center;
+    }
+    form {
+      background: #3a0070;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #7e57c2;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+      color: #d1c4e9;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+      background: #5e2ea1;
+      color: #fff;
+      box-shadow: inset 0 0 5px #7e57c2;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      box-shadow: 0 0 10px #b388ff;
+      background: #6f3bcf;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background: #3a0070;
+      color: #b388ff;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+      box-shadow: inset 0 1px 5px #7e57c2;
+    }
+    /* Futurista detalles */
+    .futuristic-border {
+      border: 2px solid #b388ff;
+      border-radius: 15px;
+      padding: 1rem;
+      box-shadow: 0 0 15px #b388ff inset;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .flex {
+        flex-direction: column;
+      }
+      .card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#actividades">Actividades</a>
+    <a href="#huellas">Huellas femeninas</a>
+    <a href="#blog">Blog</a>
+    <a href="#unete">Únete</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- Inicio / Portada -->
+  <section id="inicio" class="futuristic-border" aria-label="Inicio">
+    <h1>Hacemos visible lo invisible: rescatamos las huellas de mujeres que cambiaron la historia del Perú</h1>
+    <p>Somos un movimiento juvenil que une liderazgo, historia e innovación.</p>
+    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Jóvenes trabajando juntos" />
+    <div style="margin-top: 1.5rem;">
+      <a href="#contacto" class="btn">Unirme al proyecto</a>
+      <a href="https://wa.me/51999053232" target="_blank" rel="noopener" class="btn btn-whatsapp">Escríbenos por WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Nosotros -->
+  <section id="nosotros" aria-label="Quiénes somos">
+    <h2>Nosotros</h2>
+    <p>Somos estudiantes apasionados por la historia, buscamos dar voz a mujeres peruanas que marcaron la diferencia pero que no siempre son reconocidas.</p>
+    <div class="flex">
+      <div>
+        <h3>Misión</h3>
+        <p>Visibilizar a las protagonistas femeninas de la historia del Perú.</p>
+        <h3>Visión</h3>
+        <p>Una educación más justa e inspiradora.</p>
+        <h3>Valores</h3>
+        <ul>
+          <li>Verdad</li>
+          <li>Respeto</li>
+          <li>Liderazgo</li>
+          <li>Trabajo en equipo</li>
+        </ul>
+      </div>
+      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="Jóvenes reunidos investigando" style="max-width: 400px; border-radius: 15px; box-shadow: 0 0 20px #b388ff;" />
+    </div>
+  </section>
+
+  <!-- Actividades -->
+  <section id="actividades" aria-label="Actividades">
+    <h2>Actividades</h2>
+    <div class="flex">
+      <article class="card" aria-label="Charlas y talleres en colegios">
+        <div class="icon">🎤</div>
+        <h3>Charlas y talleres en colegios</h3>
+        <p>Liderazgo, oratoria y uso de IA para potenciar habilidades.</p>
+      </article>
+      <article class="card" aria-label="Investigación colaborativa">
+        <div class="icon">📚</div>
+        <h3>Investigación colaborativa</h3>
+        <p>Libros, entrevistas y videos para descubrir historias.</p>
+      </article>
+      <article class="card" aria-label="Contenido creativo">
+        <div class="icon">🎨</div>
+        <h3>Contenido creativo</h3>
+        <p>Afiches, publicaciones en redes y videos cortos.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Huellas femeninas -->
+  <section id="huellas" aria-label="Huellas femeninas - Protagonistas del Perú">
+    <h2>Huellas femeninas</h2>
+    <p>Conoce a algunas de las mujeres que marcaron la historia del Perú.</p>
+    <div class="flex">
+      <article class="card" aria-label="Perfil de Micaela Bastidas">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Micaela_Bastidas.jpg/220px-Micaela_Bastidas.jpg" alt="Micaela Bastidas" style="border-radius: 10px; margin-bottom: 1rem;" />
+        <h3>Micaela Bastidas</h3>
+        <p>Heroína de la independencia peruana, luchó junto a Túpac Amaru II.</p>
+      </article>
+      <article class="card" aria-label="Perfil de Tomasa Tito Condemayta">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Tomasa_Tito_Condemayta.jpg/220px-Tomasa_Tito_Condemayta.jpg" alt="Tomasa Tito Condemayta" style="border-radius: 10px; margin-bottom: 1rem;" />
+        <h3>Tomasa Tito Condemayta</h3>
+        <p>Líder indígena que participó activamente en la resistencia contra la colonia.</p>
+      </article>
+      <article class="card" aria-label="Perfil de María Parado de Bellido">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Mar%C3%ADa_Parado_de_Bellido.jpg/220px-Mar%C3%ADa_Parado_de_Bellido.jpg" alt="María Parado de Bellido" style="border-radius: 10px; margin-bottom: 1rem;" />
+        <h3>María Parado de Bellido</h3>
+        <p>Valiente patriota que entregó información clave durante la independencia.</p>
+      </article>
+    </div>
+    <p style="margin-top: 1rem;">Próximas biografías y archivo descargable próximamente.</p>
+  </section>
+
+  <!-- Blog -->
+  <section id="blog" aria-label="Blog y publicaciones juveniles">
+    <h2>Blog / Publicaciones juveniles</h2>
+    <article class="card" style="width: 100%; max-width: 700px;">
+      <h3>Cómo usamos la IA para investigar con responsabilidad</h3>
+      <p>Descubre cómo la inteligencia artificial nos ayuda a rescatar historias sin perder la ética.</p>
+    </article>
+    <article class="card" style="width: 100%; max-width: 700px;">
+      <h3>Mujeres invisibles en la Guerra del Pacífico</h3>
+      <p>Historias poco conocidas de mujeres que participaron en uno de los conflictos más importantes del Perú.</p>
+    </article>
+    <article class="card" style="width: 100%; max-width: 700px;">
+      <h3>Tips de oratoria y liderazgo para estudiantes</h3>
+      <p>Consejos prácticos para jóvenes que quieren potenciar sus habilidades de comunicación y liderazgo.</p>
+    </article>
+  </section>
+
+  <!-- Únete -->
+  <section id="unete" aria-label="Únete al proyecto">
+    <h2>Únete</h2>
+    <p>Si eres de secundaria y te mueve la historia del Perú, este es tu lugar.</p>
+    <form action="https://formsubmit.co/haylynnclemen316@gmail.com" method="POST" target="_blank" onsubmit="return validarEdad()">
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="Nombre completo" required placeholder="Tu nombre completo" />
+      
+      <label for="edad">Edad (15 a 29 años)</label>
+      <input type="number" id="edad" name="Edad" min="15" max="29" required placeholder="Tu edad" />
+      
+      <label for="colegio">Colegio o instituto</label>
+      <input type="text" id="colegio" name="Colegio o instituto" required placeholder="Nombre de tu colegio o instituto" />
+      
+      <label for="grado">Grado</label>
+      <select id="grado" name="Grado" required>
+        <option value="" disabled selected>Selecciona tu grado</option>
+        <option value="1ro secundaria">1ro secundaria</option>
+        <option value="2do secundaria">2do secundaria</option>
+        <option value="3ro secundaria">3ro secundaria</option>
+        <option value="4to secundaria">4to secundaria</option>
+        <option value="5to secundaria">5to secundaria</option>
+        <option value="Otro">Otro</option>
+      </select>
+      
+      <!-- Enviar copia a segundo correo -->
+      <input type="hidden" name="_cc" value="lyn291124120324@gmail.com" />
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" aria-label="Contacto">
+    <h2>Contacto</h2>
+    <p>Comunícate con nosotros de forma clara y rápida.</p>
+    <ul>
+      <li>WhatsApp: <a href="https://wa.me/51999053232" target="_blank" rel="noopener">+51 999 053 232</a></li>
+      <li>Correos electrónicos: 
+        <a href="mailto:haylynnclemen316@gmail.com">haylynnclemen316@gmail.com</a> / 
+        <a href="mailto:lyn291124120324@gmail.com">lyn291124120324@gmail.com</a>
+      </li>
+      <li>Redes sociales:
+        <a href="https://www.tiktok.com/@buscadoresdehuell?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener">TikTok</a> | 
+        <a href="https://www.instagram.com/buscadores_de_huellas?igsh=N3Ntc2ppZHU0cTg4" target="_blank" rel="noopener">Instagram</a> | 
+        <a href="https://www.facebook.com/profile.php?id=61579845265154" target="_blank" rel="noopener">Facebook</a>
+      </li>
+    </ul>
+    <form action="https://formsubmit.co/haylynnclemen316@gmail.com" method="POST" target="_blank" style="max-width: 500px; margin-top: 1rem;">
+      <label for="mensaje-nombre">Nombre</label>
+      <input type="text" id="mensaje-nombre" name="Nombre" required placeholder="Tu nombre" />
+      
+      <label for="mensaje-email">Correo electrónico</label>
+      <input type="email" id="mensaje-email" name="Correo electrónico" required placeholder="Tu correo" />
+      
+      <label for="mensaje-texto">Mensaje</label>
+      <textarea id="mensaje-texto" name="Mensaje" rows="4" required placeholder="Escribe tu mensaje"></textarea>
+      
+      <button type="submit" class="btn">Enviar mensaje</button>
+    </form>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 JBHVE · Jóvenes por la memoria justa · Moquegua – Perú</p>
+</footer>
+
+<script>
+  function validarEdad() {
+    const edad = document.getElementById('edad').value;
+    if (edad < 15 || edad > 29) {
+      alert('La edad debe estar entre 15 y 29 años.');
+      return false;
+    }
+    return true;
+  }
+</script>
+
+</body>
+</html>
